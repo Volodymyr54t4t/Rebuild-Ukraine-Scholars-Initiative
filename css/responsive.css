@@ -1,0 +1,143 @@
+/* ==========================================================================
+   responsive.css — Mobile-first enhancements and breakpoints
+   Breakpoints: 1024px (laptop), 768px (tablet), 560px (phone)
+   Mobile layouts are intentionally redesigned, not just shrunk.
+   ========================================================================== */
+
+/* ---- Large desktop: widen a touch ---- */
+@media (min-width: 1400px) {
+  :root { --maxw: 1280px; }
+}
+
+/* ---- Laptop / small desktop ---- */
+@media (max-width: 1024px) {
+  .section { padding: 80px 0; }
+
+  .hero__grid { gap: 40px; }
+
+  .feature-project { padding: 36px; gap: 32px; }
+
+  .interest-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .case { grid-template-columns: 160px 1fr; gap: 24px; }
+}
+
+/* ---- Tablet ---- */
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: block; }
+
+  /* Mobile nav panel */
+  .nav__links.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 16px var(--gutter) 24px;
+    box-shadow: var(--shadow);
+    max-height: calc(100vh - var(--nav-h));
+    overflow-y: auto;
+  }
+  .nav__links.is-open .nav__link {
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav__links.is-open .nav__link:last-child { border-bottom: none; }
+  .nav__links.is-open .nav__link.is-active::after { display: none; }
+  .nav__links.is-open .nav__link.is-active {
+    background-color: var(--accent-soft);
+    color: var(--accent-dark);
+  }
+
+  .brand__name { display: none; }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+  .section { padding: 64px 0; }
+  .section__head { margin-bottom: 36px; }
+
+  /* Hero becomes single column, portrait first */
+  .hero { padding: 40px 0 24px; }
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero__visual { order: -1; }
+  .portrait { max-width: 320px; margin: 0 auto; aspect-ratio: 1 / 1; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .grid--3, .grid--2 { grid-template-columns: 1fr; }
+
+  .feature-project {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 28px;
+  }
+  .feature-project__visual { order: -1; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-grid .portrait { max-width: 360px; }
+
+  .approach { grid-template-columns: 1fr; }
+
+  .ach-grid { grid-template-columns: 1fr; }
+
+  .cert-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Projects stack */
+  .proj-card,
+  .proj-card--rev { grid-template-columns: 1fr; }
+  .proj-card__visual { min-height: 200px; border-right: none; border-bottom: 1px solid var(--line); }
+  .proj-card__body { padding: 30px; }
+
+  /* Case study stacks label above body */
+  .case { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+
+  .impact-grid { grid-template-columns: 1fr; }
+  .map-grid { grid-template-columns: 1fr; }
+
+  .statement { padding: 80px 0; }
+
+  .footer__grid { flex-direction: column; gap: 28px; }
+  .footer__bottom { flex-direction: column; gap: 6px; }
+
+  .editorial { padding-left: 22px; }
+
+  .timeline { padding-left: 32px; }
+}
+
+/* ---- Phone ---- */
+@media (max-width: 560px) {
+  :root { --gutter: 18px; }
+
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { justify-content: center; }
+
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat { padding: 24px 18px; }
+
+  .cert-grid { grid-template-columns: 1fr; }
+
+  .card, .ach, .interest, .impact, .approach__item { padding: 22px; }
+
+  .feature-project { padding: 24px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .map-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .map-row__to { text-align: left; }
+
+  .to-top { right: 16px; bottom: 16px; }
+
+  .lang__btn { padding: 6px 10px; }
+}

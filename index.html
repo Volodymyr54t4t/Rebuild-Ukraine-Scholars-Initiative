@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-background">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volodymyr Chyzhevskyi — Software Engineering Student</title>
+  <meta name="description" content="Personal scholarship portfolio of Volodymyr Chyzhevskyi, Software Engineering student at Zhytomyr Polytechnic State University." />
+  <meta name="theme-color" content="#fbfbf9" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Volodymyr Chyzhevskyi — Software Engineering Student" />
+  <meta property="og:description" content="Personal scholarship portfolio — Rebuild Ukraine Scholars Initiative, Zhytomyr Polytechnic State University." />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="home">
+  <a class="sr-only" href="#main">Skip to content</a>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Volodymyr Chyzhevskyi — Home">
+        <span class="brand__logo">VC.</span>
+        <span class="brand__name">VOLODYMYR CHYZHEVSKYI<span data-i18n="brand.role">Software Engineering</span></span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a class="nav__link" data-page="home" href="index.html" data-i18n="nav.home">Home</a>
+        <a class="nav__link" data-page="about" href="about.html" data-i18n="nav.about">About</a>
+        <a class="nav__link" data-page="achievements" href="achievements.html" data-i18n="nav.achievements">Achievements</a>
+        <a class="nav__link" data-page="projects" href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a class="nav__link" data-page="journey" href="journey.html" data-i18n="nav.journey">Journey</a>
+        <a class="nav__link" data-page="rebuild" href="rebuild-ukraine.html" data-i18n="nav.rebuild">Rebuild Ukraine</a>
+        <a class="nav__link" data-page="motivation" href="motivation.html" data-i18n="nav.motivation">Motivation</a>
+        <a class="nav__link" data-page="certificates" href="certificates.html" data-i18n="nav.certificates">Certificates</a>
+        <a class="nav__link" data-page="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button class="lang__btn" data-lang="ua" aria-pressed="false">UA</button>
+          <button class="lang__btn" data-lang="en" aria-pressed="true">EN</button>
+        </div>
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <span class="hero__tag anim-in"><span class="dot"></span><span data-i18n="hero.badge">Rebuild Ukraine Scholars Initiative · 2026</span></span>
+            <h1 class="hero__title anim-in d1">Volodymyr<span class="thin">Chyzhevskyi</span></h1>
+            <p class="hero__subtitle anim-in d2" data-i18n="hero.subtitle">Software Engineering Student</p>
+            <p class="hero__lead anim-in d3 text-pretty" data-i18n="hero.lead">Building my skills in software development, research and innovation to contribute to Ukraine's technological future.</p>
+
+            <div class="hero__meta anim-in d4">
+              <span data-i18n="hero.metaProgram">F2 · Software Engineering</span>
+              <span data-i18n="hero.metaUni">Zhytomyr Polytechnic State University</span>
+              <span><strong data-i18n="hero.metaYear">2026</strong></span>
+            </div>
+
+            <div class="hero__actions anim-in d5">
+              <a class="btn btn--primary" href="journey.html" data-i18n="cta.exploreJourney">Explore my journey</a>
+              <a class="btn btn--ghost" href="motivation.html" data-i18n="cta.readMotivation">Read my motivation</a>
+            </div>
+          </div>
+
+          <div class="hero__visual anim-in d3">
+            <!-- Portrait placeholder. Replace the inner block with:
+                 <img class="portrait__img" src="assets/images/profile/portrait.jpg" alt="Volodymyr Chyzhevskyi"> -->
+            <div class="portrait">
+              <div class="portrait__inner">
+                <div class="portrait__icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </div>
+                <p class="portrait__label" data-i18n="portrait.label">Professional portrait</p>
+                <p class="portrait__hint" data-i18n="portrait.hint">[Add your photo here]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATISTICS ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow" data-i18n="stats.title">A record of consistent development</span>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><div class="stat__num" data-i18n="stat1.num">15+</div><div class="stat__label" data-i18n="stat1.label">Achievements &amp; activities</div></div>
+          <div class="stat"><div class="stat__num" data-i18n="stat2.num">2024–2026</div><div class="stat__label" data-i18n="stat2.label">Active development</div></div>
+          <div class="stat"><div class="stat__num" data-i18n="stat3.num">F2</div><div class="stat__label" data-i18n="stat3.label">Software Engineering</div></div>
+          <div class="stat"><div class="stat__num" data-i18n="stat4.num">Multiple</div><div class="stat__label" data-i18n="stat4.label">National &amp; international competitions</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED ACHIEVEMENTS ===================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__eyebrow" data-i18n="featured.eyebrow">Featured achievements</span>
+          <h2 class="section__title text-balance" data-i18n="featured.title">Recognised at national and international level</h2>
+        </div>
+
+        <div class="grid grid--3 reveal-stagger">
+          <article class="card card--hover ach-feature">
+            <span class="ach-feature__result" data-i18n="fa1.result">Gold Medal</span>
+            <h3 class="ach-feature__title" data-i18n="fa1.title">INFOMATRIX Ukraine 2026</h3>
+            <p class="ach-feature__sub" data-i18n="fa1.sub">Software Development</p>
+            <div class="ach-feature__spacer"></div>
+            <span class="badge badge--gold">Software</span>
+          </article>
+          <article class="card card--hover ach-feature">
+            <span class="ach-feature__result" data-i18n="fa2.result">1st Place</span>
+            <h3 class="ach-feature__title" data-i18n="fa2.title">Hack The FICT</h3>
+            <p class="ach-feature__sub" data-i18n="fa2.sub">HelioCore AI</p>
+            <div class="ach-feature__spacer"></div>
+            <span class="badge">Hackathon</span>
+          </article>
+          <article class="card card--hover ach-feature">
+            <span class="ach-feature__result" data-i18n="fa3.result">Absolute Winner</span>
+            <h3 class="ach-feature__title" data-i18n="fa3.title">School Website Competition</h3>
+            <p class="ach-feature__sub" data-i18n="fa3.sub">Youth Web Design</p>
+            <div class="ach-feature__spacer"></div>
+            <span class="badge badge--muted">Web Design</span>
+          </article>
+        </div>
+
+        <div class="reveal" style="margin-top: 32px;">
+          <a class="btn btn--link link-underline" href="achievements.html"><span data-i18n="cta.viewAll">View all achievements</span> <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECT ===================== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="feature-project reveal">
+          <div class="feature-project__body">
+            <span class="section__eyebrow" data-i18n="fp.eyebrow">Featured project</span>
+            <span class="badge" data-i18n="fp.badge">1st Place — Hack The FICT · 2026</span>
+            <h2 class="feature-project__title" data-i18n="fp.title">HelioCore AI</h2>
+            <p class="feature-project__desc text-pretty" data-i18n="fp.desc">An innovative technology project focused on energy-related solutions, combining software and hardware concepts to explore practical approaches to energy management and resilience.</p>
+            <div style="margin-top: 24px;">
+              <a class="btn btn--accent" href="projects.html" data-i18n="cta.viewProject">View project</a>
+            </div>
+          </div>
+          <div class="feature-project__panel">
+            <span data-i18n="fp.panel">Project visual — [Add image]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL STATEMENT ===================== -->
+    <section class="statement">
+      <div class="container reveal">
+        <h2 class="statement__text text-balance">
+          <span class="line" data-i18n="home.statement1">I want to learn.</span>
+          <span class="line" data-i18n="home.statement2">I want to build.</span>
+          <span class="line muted" data-i18n="home.statement3">I want to contribute.</span>
+        </h2>
+        <div class="statement__actions">
+          <a class="btn btn--primary" href="motivation.html"><span data-i18n="cta.readMotivation">Read my motivation</span> <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__logo">VC.</span>
+          <span class="brand__name">VOLODYMYR CHYZHEVSKYI<span data-i18n="brand.role">Software Engineering</span></span>
+        </a>
+        <p data-i18n="footer.tagline">Personal scholarship portfolio — Rebuild Ukraine Scholars Initiative, Zhytomyr Polytechnic State University.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="achievements.html" data-i18n="nav.achievements">Achievements</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="journey.html" data-i18n="nav.journey">Journey</a>
+        <a href="rebuild-ukraine.html" data-i18n="nav.rebuild">Rebuild Ukraine</a>
+        <a href="motivation.html" data-i18n="nav.motivation">Motivation</a>
+        <a href="certificates.html" data-i18n="nav.certificates">Certificates</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Volodymyr Chyzhevskyi</span>
+      <span data-i18n="footer.rights">Built with HTML, CSS &amp; JavaScript.</span>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Back to top" title="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- Scripts (order matters: language first) -->
+  <script src="js/language.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
