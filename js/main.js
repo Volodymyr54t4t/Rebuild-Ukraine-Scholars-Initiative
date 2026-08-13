@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initScrollReveal();
   initBackToTop();
   initSmoothAnchors();
+  initContactForm();
 });
 
 /* --------------------------------------------------------------------------
@@ -191,5 +192,43 @@ function initSmoothAnchors() {
       const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
       window.scrollTo({ top: top, behavior: "smooth" });
     });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Contact form: client-side validation + friendly success state.
+   This is a static site, so there is no backend — on valid submit we show a
+   confirmation message instead of sending. Wire to a real endpoint later.
+   -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  const status = form.querySelector(".form__status");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Native constraint validation (required, type="email", etc.).
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
+
+    if (status) {
+      status.textContent = window.i18n
+        ? window.i18n.t("contact.success")
+        : "Thank you — your message has been recorded.";
+      status.classList.add("is-visible");
+    }
+    form.reset();
+
+    // Re-enable after a short pause so the user sees the confirmation.
+    window.setTimeout(function () {
+      if (btn) btn.disabled = false;
+    }, 1500);
   });
 }
