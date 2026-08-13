@@ -1233,6 +1233,65 @@ p {
 .contact-card__label { font-size: 13px; color: var(--ink-muted); }
 .contact-card__value { font-weight: 600; font-size: 17px; margin-top: 2px; }
 
+/* Contact page layout: links + message form side by side */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact-grid { margin-top: 24px; }
+
+/* Message form */
+.contact-form-wrap {
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(700px 320px at 100% 0%, var(--accent-soft), transparent 60%),
+    var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.form { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field label {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--ink-soft);
+}
+.field input,
+.field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  padding: 13px 15px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.field textarea { resize: vertical; min-height: 120px; }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--ink-muted); }
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.form__actions {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 4px;
+}
+.form__status {
+  font-size: 14px; font-weight: 600; color: var(--accent);
+  opacity: 0; transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.form__status.is-visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 860px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+}
+
 /* --------------------------------------------------------------------------
    20. Footer
    -------------------------------------------------------------------------- */

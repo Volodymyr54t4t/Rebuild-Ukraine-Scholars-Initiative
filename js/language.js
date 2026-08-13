@@ -158,6 +158,16 @@ const translations = {
     "contact.githubLabel": "GitHub",
     "contact.portfolioLabel": "Portfolio",
     "contact.placeholder": "[Add link]",
+    "contact.linksTitle": "Direct channels",
+    "contact.note": "Contact links are placeholders. Replace the href values with your real email, LinkedIn and GitHub.",
+    "contact.formTitle": "Send a message",
+    "contact.nameLabel": "Name",
+    "contact.namePh": "Your name",
+    "contact.emailPh": "you@example.com",
+    "contact.messageLabel": "Message",
+    "contact.messagePh": "Write your message...",
+    "contact.send": "Send message",
+    "contact.success": "Thank you — your message has been recorded.",
     "contact.statement": "The future is built by people who are willing to learn, create and take responsibility."
   },
 
@@ -265,7 +275,7 @@ const translations = {
     /* ---- Відбудова України ---- */
     "rebuild.title": "Відбудова України",
     "rebuild.sub": "Як технології можуть долучитися до майбутнього України?",
-    "rebuild.intro1": "Майбутнє України потребуватиме фахівців, здатних розробляти сучасні технології, цифрові сервіси та інноваційні рішення.",
+    "rebuild.intro1": "Майбутнє України потребуват��ме фахівців, здатних розробляти сучасні технології, цифрові сервіси та інноваційні рішення.",
     "rebuild.intro2": "Мій внесок починається зі сфери, яку я знаю і хочу розвивати, — інженерії програмного забезпечення.",
     "rebuild.areasTitle": "Чотири напрями, де технології мають значення",
     "imp1.title": "Цифровізація",
@@ -306,6 +316,16 @@ const translations = {
     "contact.githubLabel": "GitHub",
     "contact.portfolioLabel": "Портфоліо",
     "contact.placeholder": "[Додати посилання]",
+    "contact.linksTitle": "Прямі канали зв'язку",
+    "contact.note": "Посилання для контакту є заповнювачами. Замініть значення href на свою справжню пошту, LinkedIn та GitHub.",
+    "contact.formTitle": "Надіслати повідомлення",
+    "contact.nameLabel": "Ім'я",
+    "contact.namePh": "Ваше ім'я",
+    "contact.emailPh": "you@example.com",
+    "contact.messageLabel": "Повідомлення",
+    "contact.messagePh": "Напишіть ваше повідомлення...",
+    "contact.send": "Надіслати повідомлення",
+    "contact.success": "Дякую — ваше повідомлення записано.",
     "contact.statement": "Майбутнє будують люди, готові вчитися, творити і брати на себе відповідальність."
   }
 };
@@ -334,6 +354,13 @@ function setLanguage(lang) {
     const key = el.getAttribute("data-i18n");
     const value = translations[lang][key];
     if (value !== undefined) el.textContent = value;
+  });
+
+  // Swap placeholders for inputs/textareas that declare a placeholder key.
+  document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+    const key = el.getAttribute("data-i18n-ph");
+    const value = translations[lang][key];
+    if (value !== undefined) el.setAttribute("placeholder", value);
   });
 
   // Update <html lang="...">
